@@ -15,6 +15,30 @@
 2. Frontend - минимальное веб приложение, в котором можно загрузить файл и в ответ получить id. Также должно присутствовать поле, в котором можно получить результат по id.
 
 
+## Инструкция
+
+### Запуск сервиса
+```sh
+docker-compose build
+docker-compose up
+```
+
+### Запуск базовых тестов
+```sh
+# Navigate tests folder
+cd tests
+# Create venv
+python3 -m venv .test-venv
+source .test-venv/bin/activate
+pip install -r requirements.txt
+# Run tests
+pytest test.py
+```
+
+### GUI
+Можно использовать сгенерированный Swagger UI, после запуска открыть http://localhost:9000/docs 
+
+
 ## Детали реализации
 
 ### База данных
