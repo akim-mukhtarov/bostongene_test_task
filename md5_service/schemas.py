@@ -8,7 +8,8 @@ class Md5TaskId(BaseModel):
 
 class Md5Task(BaseModel):
     status: TaskStatus
-    result: str
+    result: str | None
 
     class Config:
         orm_mode = True
+
