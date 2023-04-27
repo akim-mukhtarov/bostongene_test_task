@@ -38,6 +38,9 @@ services:
     volumes:
       - "/tmp:/tmp"
       - "/var/log:/var/log"
+    deploy:
+      replicas: 2
+
     environment:
       CELERY_BROKER_URL: "amqp://rabbit"
       # CELERY_RESULT_BACKEND_URL: "rpc://rabbit"
