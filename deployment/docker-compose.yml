@@ -40,6 +40,9 @@ services:
     volumes:
       - "/tmp:/tmp"
       - "/var/log:/var/log"
+    deploy:
+      replicas: 3
+
     environment:
       CELERY_BROKER_URL: "amqp://rabbit"
       CELERY_RESULT_BACKEND_URL: "db+postgresql://postgres:postgres@db/postgres"
