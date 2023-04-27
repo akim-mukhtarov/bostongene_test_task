@@ -21,7 +21,7 @@ def test_compute_hash(testfile):
     response = r.post(url, files={'file': testfile})
     task_id = response.json()['task_id']
 
-    time.sleep(10)
+    time.sleep(15)
     url = f"http://localhost:9000/hashes/{task_id}"
     expected_response = {
         "status": "SUCCESS",
